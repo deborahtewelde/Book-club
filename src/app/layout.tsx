@@ -38,11 +38,14 @@ export default function RootLayout({
           <Link href="/blog" className=" hover:underline">
             Blogg
           </Link>
+          <Link href="/Om-oss" className=" hover:underline">
+            Om oss
+          </Link>
         </nav>
         {children}
         {/* Footer */}
         <footer className="w-full bg-gray-100 p-4 text-center fixed bottom-0">
-          © {new Date().getFullYear()} Bokklubb 
+          © {new Date().getFullYear()} Bokklubb
         </footer>
       </body>
     </html>
