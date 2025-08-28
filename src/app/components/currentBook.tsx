@@ -15,7 +15,7 @@ export default function CurrentBook({
 }: CurrentBookProps) {
   return (
     <div>
-      <div className="p-4 border rounded-lg shadow-md max-w-sm">
+      <div className=" rounded-lg shadow-md max-w-sm">
         {image && (
           <Image
             src={image}
@@ -25,9 +25,7 @@ export default function CurrentBook({
             className="mb-4 rounded"
           />
         )}
-        <h2 className="text-xl font-bold">
-          {title} av {author} ({pubYear})
-        </h2>
+        <h2 className="text-xl font-bold">{title}</h2>
         <p className="text-gray-600">
           {author} ({pubYear})
         </p>

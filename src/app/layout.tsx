@@ -27,7 +27,8 @@ export default function RootLayout({
     <html lang="no">
       <body
         //className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        className=" w-full bg-blue-50 antialiased"
+        //flex flex-col min-h-screen på body gjør at siden alltid er minst like høy som skjermen.
+        className="flex flex-col min-h-screen bg-blue-50 antialiased"
       >
         {/*Navbar */}
         <nav className="w-full bg-gray-100 p-4 flex gap-10">
@@ -40,8 +41,8 @@ export default function RootLayout({
         </nav>
         {children}
         {/* Footer */}
-        <footer className="w-full bg-gray-100 p-4 text-center">
-          © {new Date().getFullYear()} Bokklubb
+        <footer className="w-full bg-gray-100 p-4 text-center fixed bottom-0">
+          © {new Date().getFullYear()} Bokklubb 
         </footer>
       </body>
     </html>
