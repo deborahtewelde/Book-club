@@ -1,33 +1,46 @@
+"use client";
+
+import Image from "next/image";
 import CurrentBook from "./components/currentBook";
 
 export default function HomePage() {
+  const currentBook = {
+    title: "Noe tapt og noe vunnet",
+    author: "Tara Westover",
+    pubYear: 2019,
+    image: "/Noe_tapt.svg",
+  };
+
   return (
-    <div>
-      <h1 className="text-3xl font-bold mb-6">
-        Velkommen til big books, big booties!
-      </h1>
-      <div className="text-2xl font-bold text-center mb-6">
-        <h1>Månedens bøker</h1>
+    <div className="p-6">
+      {/* Header-bilde */}
+      <div className="w-full relative mb-8">
+        <Image
+          src="/forside_noe_tapt.svg"
+          alt="Velkommen til Big Books Big Booties"
+          width={1820}
+          height={500}
+          className="w-full h-auto object-cover rounded-lg shadow-lg"
+        />
+        <h1 className="absolute inset-0 flex items-center justify-center text-4xl sm:text-6xl font-bold text-white drop-shadow-lg text-center">
+          Velkommen til Big Books Big Booties
+        </h1>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
-        <CurrentBook
-          title="Naiv. Super."
-          author="Erlend Loe"
-          pubYear={1996}
-          image="/naiv_super.jpg"
-        />
-        <CurrentBook
-          title="Hvor er de voksne"
-          author="Nina Lykke"
-          pubYear={2025}
-          image="/hvor_er_de_voksne_NL.jpg"
-        />
-        <CurrentBook
-          title="An Amorous Discourse In Th Suburb Of Hell"
-          author="Deborah Levy"
-          pubYear={1990}
-          image="/Deborah_Levy_Suburbs.png"
-        />
+
+      {/* Månedens bok */}
+      <h2 className="text-5xl font-bold mb-6 text-center">Månedens bok</h2>
+      <div className="flex justify-center mb-8">
+        <CurrentBook {...currentBook} />
+      </div>
+
+      {/* Lenke til tidligere bøker */}
+      <div className="text-center mt-8">
+        <a
+          href="/blog"
+          className="text-blue-600 hover:text-blue-800 underline text-lg"
+        >
+          Se tidligere bøker →
+        </a>
       </div>
     </div>
   );

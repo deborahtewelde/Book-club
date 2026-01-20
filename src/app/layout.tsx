@@ -18,6 +18,8 @@ export const metadata: Metadata = {
   description: "App for vi som skal lese noen bøker dette efteråret",
 };
 
+
+
 export default function RootLayout({
   children,
 }: Readonly<{

@@ -1,10 +1,10 @@
 import Image from "next/image";
 
-interface CurrentBookProps {
+export interface CurrentBookProps {
   title: string;
   author: string;
   pubYear: number;
-  image?: string;
+  image: string;
 }
 
 export default function CurrentBook({
@@ -15,7 +15,7 @@ export default function CurrentBook({
 }: CurrentBookProps) {
   return (
     <div>
-      <div className=" rounded-lg shadow-md max-w-sm">
+      <div className=" rounded-lg shadow-md max-w-sm px-8">
         {image && (
           <Image
             src={image}
