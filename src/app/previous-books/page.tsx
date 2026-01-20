@@ -13,6 +13,7 @@ export default function PreviousBooksPage() {
     { name: "Mari", score: 4 },
     { name: "Deborah", score: 4 },
     { name: "Thea", score: 5 },
+    {name: "Sandra", score: 5}
   ];
 
   const avg = ratings.reduce((sum, r) => sum + r.score, 0) / ratings.length;
