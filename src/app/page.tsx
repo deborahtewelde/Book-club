@@ -23,7 +23,7 @@ export default function HomePage() {
           className="w-full h-auto object-cover rounded-lg shadow-lg"
         />
         <h1 className="absolute inset-0 flex items-center justify-center text-4xl sm:text-6xl font-bold text-white drop-shadow-lg text-center">
-          Velkommen til Big Books Big Booties
+          Velkommen til Big Books, Big Booties
         </h1>
       </div>
 
